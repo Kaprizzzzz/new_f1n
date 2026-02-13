@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const API = 'https://your-ngrok-url.ngrok-free.app';
+const API = 'https://8539-45-89-90-142.ngrok-free.app';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
