@@ -1,0 +1,28 @@
+<div class="sphere expense"
+     [class.full]="active"
+     (click)="toggle()">
+
+  <span *ngIf="!active">EXPENSE</span>
+
+  <div class="sub" *ngIf="active">
+    <div class="sub-item"
+         *ngFor="let c of categories"
+         (click)="select(c); $event.stopPropagation()">
+      {{ c }}
+    </div>
+
+    <div class="sub-item plus"
+         (click)="$event.stopPropagation()">
+      +
+    </div>
+  </div>
+
+</div>
+
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <h3>{{ selectedCategory }}</h3>
+    <input type="number" [(ngModel)]="amount" />
+    <button (click)="save()">Save</button>
+  </div>
+</div>

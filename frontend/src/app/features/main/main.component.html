@@ -1,0 +1,21 @@
+<div class="circles">
+
+  <app-income
+    [active]="active === 'income'"
+    [hidden]="active !== 'none' && active !== 'income'"
+    (open)="toggle('income')"
+  />
+
+  <app-expense
+    [active]="active === 'expense'"
+    [hidden]="active !== 'none' && active !== 'expense'"
+    (open)="toggle('expense')"
+  />
+
+  <app-saving
+    [active]="active === 'saving'"
+    [hidden]="active !== 'none' && active !== 'saving'"
+    (open)="toggle('saving')"
+  />
+
+</div>

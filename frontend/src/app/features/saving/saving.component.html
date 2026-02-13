@@ -1,0 +1,16 @@
+<div class="sphere saving"
+     [class.full]="active"
+     (click)="toggle()">
+
+  <span *ngIf="!active">SAVING</span>
+
+  <div *ngIf="active" class="saving-content">
+    <h2>{{ income - expense }}</h2>
+
+    <div class="tx"
+         *ngFor="let t of transactions">
+      {{ t.type }} — {{ t.category }} — {{ t.amount }}
+    </div>
+  </div>
+
+</div>

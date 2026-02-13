@@ -1,0 +1,55 @@
+.sphere {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dc2626;
+
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+}
+
+.sphere.full {
+  position: fixed;
+  inset: 0;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.sub {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  bottom: 50px;
+}
+
+.sub-item {
+  background: white;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #dc2626;
+
+  padding: 20px;
+  border-radius: 12px;
+}
